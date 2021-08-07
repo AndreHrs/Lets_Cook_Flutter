@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "594577405751",
+    "firebase_url": "https://myfcm-63832.firebaseio.com",
+    "project_id": "myfcm-63832",
+    "storage_bucket": "myfcm-63832.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594577405751:android:7820cab84e55e4ed730cb2",
+        "android_client_info": {
+          "package_name": "com.example.final_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594577405751-4tn43n5v7hs46esh7ic5ivauakaqmr08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVaJSrLNFVlBUJvbZaH--NSzZOeCNtmvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594577405751-4tn43n5v7hs46esh7ic5ivauakaqmr08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594577405751:android:bdff0e71ced067c6730cb2",
+        "android_client_info": {
+          "package_name": "com.example.sanberappflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594577405751-4tn43n5v7hs46esh7ic5ivauakaqmr08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVaJSrLNFVlBUJvbZaH--NSzZOeCNtmvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594577405751-4tn43n5v7hs46esh7ic5ivauakaqmr08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594577405751:android:0e26b844fc07e060",
+        "android_client_info": {
+          "package_name": "com.minerva.myfcmproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594577405751-9jdevil6cvpjikgmn2cid70fqpishodl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minerva.myfcmproject",
+            "certificate_hash": "5d27ffe1c386a6a4414e0777e0c4628e74d2d4ac"
+          }
+        },
+        {
+          "client_id": "594577405751-4tn43n5v7hs46esh7ic5ivauakaqmr08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVaJSrLNFVlBUJvbZaH--NSzZOeCNtmvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594577405751-4tn43n5v7hs46esh7ic5ivauakaqmr08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

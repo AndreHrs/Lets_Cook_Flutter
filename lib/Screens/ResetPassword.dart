@@ -67,91 +67,94 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             appBar: AppBar(
               title: Text('Reset Password'),
             ),
-            body: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  SizedBox(
-                    height: 100,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/cry.png',
-                        height: 175,
-                        width: 175,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 13,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Text(
-                          "We're sad to hear you have problem signing in\nBut we'll help you get in touch soon\nInput your email below so we can send you email to reset your password",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  TextField(
-                    controller: emailController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Color(0XFF54C5F8)),
-                      ),
-                      hintText: 'Email',
+            body: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 40.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(
+                      height: 100,
                     ),
-                  ),
-                  SizedBox(
-                    height: 18,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                          child: ElevatedButton(
-                        onPressed: () async {
-                          await _firebaseAuth
-                              .sendPasswordResetEmail(
-                            email: emailController.text,
-                          )
-                              .then((value) {
-                            setState(() {
-                              _emailSent = true;
-                            });
-                          });
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/images/cry.png',
+                          height: 175,
+                          width: 175,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 13,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Flexible(
                           child: Text(
-                            'Send',
+                            "We're sad to hear you have problem signing in\nBut we'll help you get in touch soon\nInput your email below so we can send you email to reset your password",
                             style: TextStyle(
                               fontSize: 14,
-                              fontWeight: FontWeight.w400,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TextField(
+                      controller: emailController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(color: Color(0XFF54C5F8)),
+                        ),
+                        hintText: 'Email',
+                      ),
+                    ),
+                    SizedBox(
+                      height: 18,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                            child: ElevatedButton(
+                          onPressed: () async {
+                            await _firebaseAuth
+                                .sendPasswordResetEmail(
+                              email: emailController.text,
+                            )
+                                .then((value) {
+                              setState(() {
+                                _emailSent = true;
+                              });
+                            });
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Text(
+                              'Send',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
-                        ),
-                      )),
-                    ],
-                  ),
-                ],
+                        )),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ));
+            )
+            );
   }
 }
 

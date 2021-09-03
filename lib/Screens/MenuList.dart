@@ -12,10 +12,18 @@ class MenuList extends StatelessWidget {
 
     String getExcerpt(String fullText) {
       String firstParagraph = fullText.split('\n')[0];
-      if (firstParagraph.length <= 200) {
-        return firstParagraph;
+      if (fullText.length <= 200) {
+        return fullText;
       }
-      return firstParagraph.substring(0, 200) + '...';
+      else{
+        if(firstParagraph.length <= 200){
+          return firstParagraph;
+        }
+        else{
+          return firstParagraph.substring(0, 200) + '...';
+        }
+      }
+      
     }
 
     return Scaffold(
@@ -44,7 +52,7 @@ class MenuList extends StatelessWidget {
                         text: getExcerpt(args.strCategoryDescription),
                         style: TextStyle(fontSize: 14, color: Colors.black),
                         children: <TextSpan>[
-                          args.strCategoryDescription.split('\n')[0].length >
+                          args.strCategoryDescription.length >
                                   200
                               ? TextSpan(
                                   text: '\nclick here to read details',

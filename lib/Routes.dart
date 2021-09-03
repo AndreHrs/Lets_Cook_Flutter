@@ -1,4 +1,5 @@
 import 'package:final_project/Screens/AboutScreen.dart';
+import 'package:final_project/Screens/CategoryDesc.dart';
 import 'package:final_project/Screens/MenuDetails.dart';
 import 'package:final_project/Screens/MenuList.dart';
 
@@ -17,6 +18,7 @@ final Map<String, WidgetBuilder>  routeNames = {
   '/about' : (context) => AboutScreen(),
   '/menuList' : (context) => MenuList(),
   '/menuDetails' : (context) => MenuDetails(),
+  '/catDetails' : (context) => CategoryDetails(),
 };
 
 final String initialRouteName = '/login';

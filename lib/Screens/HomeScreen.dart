@@ -28,7 +28,13 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, '/about');
             },
-            icon: Icon(Icons.copyright_rounded))
+            icon: Icon(Icons.copyright_rounded)),
+          IconButton(
+            onPressed: () async {
+              await auth.signOut();
+              Navigator.pushReplacementNamed(context, '/login');
+            },
+            icon: Icon(Icons.logout))
       ]),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0),

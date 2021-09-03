@@ -13,6 +13,20 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController emailController = TextEditingController();
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final FlutterSecureStorage secureStorage = const FlutterSecureStorage();
+  bool _obscureText = true;
+
+  void _toggleShowPassword() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
+  Future<void> checkUser() async {
+    User? user = FirebaseAuth.instance.currentUser;
+    if(user != null) {
+      Navigator.pushReplacementNamed(context, '/home');
+    }
+  }
 
   Future<void> loginAction() async {
     try {
@@ -34,6 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    checkUser();
     return Scaffold(
         body: SingleChildScrollView(
           child: Padding(
@@ -86,12 +101,20 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             TextField(
               controller: passwordController,
+              obscureText: _obscureText,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: Color(0XFF54C5F8)),
                 ),
                 hintText: 'Password',
+                suffixIcon: IconButton(
+                  icon: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
+                  color: Theme.of(context).primaryColorDark,
+                  onPressed: (){
+                    _toggleShowPassword();
+                  },
+                )
               ),
             ),
             SizedBox(

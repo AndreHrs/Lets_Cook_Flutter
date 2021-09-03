@@ -6,7 +6,7 @@ class MenuDetailsModel {
   final String strArea;
   final String strInstructions;
   final String strMealThumb;
-  final String strTags;
+  final String? strTags;
   final String strYoutube;
   final String strIngredient1;
   final String strIngredient2;
@@ -16,18 +16,18 @@ class MenuDetailsModel {
   final String strIngredient6;
   final String strIngredient7;
   final String strIngredient8;
-  final String strIngredient9;
-  final String strIngredient10;
-  final String strIngredient11;
-  final String strIngredient12;
-  final String strIngredient13;
-  final String strIngredient14;
-  final String strIngredient15;
-  final String strIngredient16;
-  final String strIngredient17;
-  final String strIngredient18;
-  final String strIngredient19;
-  final String strIngredient20;
+  final String? strIngredient9;
+  final String? strIngredient10;
+  final String? strIngredient11;
+  final String? strIngredient12;
+  final String? strIngredient13;
+  final String? strIngredient14;
+  final String? strIngredient15;
+  final String? strIngredient16;
+  final String? strIngredient17;
+  final String? strIngredient18;
+  final String? strIngredient19;
+  final String? strIngredient20;
   final String strMeasure1;
   final String strMeasure2;
   final String strMeasure3;
@@ -36,18 +36,18 @@ class MenuDetailsModel {
   final String strMeasure6;
   final String strMeasure7;
   final String strMeasure8;
-  final String strMeasure9;
-  final String strMeasure10;
-  final String strMeasure11;
-  final String strMeasure12;
-  final String strMeasure13;
-  final String strMeasure14;
-  final String strMeasure15;
-  final String strMeasure16;
-  final String strMeasure17;
-  final String strMeasure18;
-  final String strMeasure19;
-  final String strMeasure20;
+  final String? strMeasure9;
+  final String? strMeasure10;
+  final String? strMeasure11;
+  final String? strMeasure12;
+  final String? strMeasure13;
+  final String? strMeasure14;
+  final String? strMeasure15;
+  final String? strMeasure16;
+  final String? strMeasure17;
+  final String? strMeasure18;
+  final String? strMeasure19;
+  final String? strMeasure20;
   final String? strSource;
   final String? strImageSource;
   final String? strCreativeCommonsConfirmed;
@@ -118,7 +118,7 @@ class MenuDetailsModel {
       json['strArea'] as String,
       json['strInstructions'] as String,
       json['strMealThumb'] as String,
-      json['strTags'] as String,
+      json['strTags'] as String?,
       json['strYoutube'] as String,
       json['strIngredient1'] as String,
       json['strIngredient2'] as String,
@@ -128,18 +128,18 @@ class MenuDetailsModel {
       json['strIngredient6'] as String,
       json['strIngredient7'] as String,
       json['strIngredient8'] as String,
-      json['strIngredient9'] as String,
-      json['strIngredient10'] as String,
-      json['strIngredient11'] as String,
-      json['strIngredient12'] as String,
-      json['strIngredient13'] as String,
-      json['strIngredient14'] as String,
-      json['strIngredient15'] as String,
-      json['strIngredient16'] as String,
-      json['strIngredient17'] as String,
-      json['strIngredient18'] as String,
-      json['strIngredient19'] as String,
-      json['strIngredient20'] as String,
+      json['strIngredient9'] as String?,
+      json['strIngredient10'] as String?,
+      json['strIngredient11'] as String?,
+      json['strIngredient12'] as String?,
+      json['strIngredient13'] as String?,
+      json['strIngredient14'] as String?,
+      json['strIngredient15'] as String?,
+      json['strIngredient16'] as String?,
+      json['strIngredient17'] as String?,
+      json['strIngredient18'] as String?,
+      json['strIngredient19'] as String?,
+      json['strIngredient20'] as String?,
       json['strMeasure1'] as String,
       json['strMeasure2'] as String,
       json['strMeasure3'] as String,
@@ -148,18 +148,18 @@ class MenuDetailsModel {
       json['strMeasure6'] as String,
       json['strMeasure7'] as String,
       json['strMeasure8'] as String,
-      json['strMeasure9'] as String,
-      json['strMeasure10'] as String,
-      json['strMeasure11'] as String,
-      json['strMeasure12'] as String,
-      json['strMeasure13'] as String,
-      json['strMeasure14'] as String,
-      json['strMeasure15'] as String,
-      json['strMeasure16'] as String,
-      json['strMeasure17'] as String,
-      json['strMeasure18'] as String,
-      json['strMeasure19'] as String,
-      json['strMeasure20'] as String,
+      json['strMeasure9'] as String?,
+      json['strMeasure10'] as String?,
+      json['strMeasure11'] as String?,
+      json['strMeasure12'] as String?,
+      json['strMeasure13'] as String?,
+      json['strMeasure14'] as String?,
+      json['strMeasure15'] as String?,
+      json['strMeasure16'] as String?,
+      json['strMeasure17'] as String?,
+      json['strMeasure18'] as String?,
+      json['strMeasure19'] as String?,
+      json['strMeasure20'] as String?,
       json['strSource'] as String?,
       json['strImageSource'] as String?,
       json['strCreativeCommonsConfirmed'] as String?,

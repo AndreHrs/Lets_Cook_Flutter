@@ -23,7 +23,6 @@ class _MenuDetailsState extends State<MenuDetails> {
     final String url = 'https://www.themealdb.com/api/json/v1/1/' +
         (randomize ? ('random.php') : ('lookup.php?i=' + mealId!));
     print('String url ${url}');
-    log('String url ${url}');
 
     final response = await http.get(Uri.parse(url));
     // ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Get details data')));
@@ -31,6 +30,7 @@ class _MenuDetailsState extends State<MenuDetails> {
       // If the server did return a 200 OK response,
       // then parse the JSON.
       var jsonData = jsonDecode(response.body);
+      print(jsonDecode(response.body));
       List<MenuDetailsModel> dataList = [];
 
       for (var item in jsonData['meals']) {

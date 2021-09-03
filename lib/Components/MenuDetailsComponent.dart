@@ -104,7 +104,10 @@ List<Widget> getIngredientRows(MenuDetailsModel data) {
   Map dataJson = data.toJson();
   List<Widget> widgetList = [];
   for (int i = 1; i <= 20; i++) {
-    if (dataJson["strIngredient${i}"] == '' || dataJson["strIngredient${i}"] == 'null' || dataJson["strIngredient${i}"] == ' ') {
+    if (
+      dataJson["strIngredient${i}"] == '' || dataJson["strIngredient${i}"] == 'null' || 
+      dataJson["strIngredient${i}"] == ' ' || dataJson["strIngredient${i}"] == null
+    ) {
       continue;
     }
     else{
